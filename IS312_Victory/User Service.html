@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victory Malolos Dashboard</title>
+
+    <style>
+        /* General page styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ced2dc;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 200px;              /* Fixed width */
+            height: 100vh;             /* Full viewport height */
+            background-color: #ffffff; /* White background */
+            display: flex;             /* Flexbox for vertical layout */
+            flex-direction: column;    /* Stack items vertically */
+            align-items: center;       /* Center items horizontally */
+            padding-top: 20px;         /* Space at the top */
+            position: fixed;           /* Sidebar stays fixed */
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar img {
+            display: block;
+            margin-top: 20px;
+            width: 180px;              /* Logo size */
+        }
+
+        /* Base button styling */
+        .nav-button, .logout-button {
+            color: #000000;
+            font-family: NATS;
+            background-color: #ffffff;
+            border: none;
+            padding: 12px;
+            margin: 5px 0;
+            cursor: pointer;
+            width: 80%;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Hover effects for navigation buttons */
+        .nav-button:hover {
+            background-color: #4a90e2;
+            color: #ffffff;
+            transform: scale(1.03);
+        }
+
+        .nav-button:active {
+            background-color: #357ab8;
+            transform: scale(0.98);
+        }
+
+        /* Hover effects for logout button */
+        .logout-button:hover {
+            background-color: #e74c3c;
+            color: #ffffff;
+            transform: scale(1.03);
+        }
+
+        /* Main content styling */
+        .main {
+            margin-left: 190px; /* Matches sidebar width */
+            padding: 20px;
+        }
+
+        /* Header styling - combined divs */
+        .header {
+            display: flex;
+            justify-content: space-between; /* Logo left, user icon right */
+            align-items: center;
+            background-color: #ecf0f1;
+            padding: 10px 20px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .header img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center; /* Icon + text inline */
+        }
+
+        /* Events section styling - combined cards */
+        .events {
+            margin-top: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .event-list {
+            display: flex; /* Line up event cards */
+            gap: 20px;     /* Space between them */
+            flex-wrap: wrap; /* Wrap on smaller screens */
+        }
+
+        .event-card {
+            flex: 1;
+            min-width: 200px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Container for the service grid */
+        .service-container {
+            background-color: #ffffff;   /* Black background */
+            padding: 20px;              /* Space inside the container */
+            border-radius: 15px;        /* Curved corners */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow */
+            margin-top: 5px;
+        }
+
+        /* Services grid styling */
+        .service-grid {
+            display: grid;                          /* Enable CSS grid */
+            grid-template-columns: repeat(3, 1fr);  /* 3 equal-width columns */
+            grid-template-rows: repeat(3, auto);    /* 3 rows */
+            gap: 20px;                              /* Space between buttons */
+            margin-top: 20px;
+        }
+
+        /* Button styling */
+        .service-button {
+            padding: 15px;
+            background: linear-gradient(90deg, #bacfdb, #9ab9cc);
+            border: none;
+            color: #000000;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .service-button:hover {
+            background: linear-gradient(135deg, #4a90e2, #357ab8);
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+        }
+
+        /* Active (click) effect */
+        .service-button:active {
+            transform: scale(0.97);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        /* Pagination container */
+        .pagination {
+            display: flex;
+            justify-content: center;   /* Center the buttons */
+            margin-top: 20px;
+            gap: 10px;                 /* Space between buttons */
+        }
+
+        /* Page button styling */
+        .page-button {
+            padding: 5px 10px;
+            background-color: #ffffff;
+            border: 0px solid #000000;
+            font-size: 10px;
+            color: #000000;
+            font-weight: normal;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .page-button:hover {
+            background-color: #4a90e2;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Active page styling */
+        .page-button.active {
+            background-color: #357ab8;
+            color: #ffffff;
+            border-color: #357ab8;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Sidebar container -->
+    <div class="sidebar">
+        <!-- Logo at the top of the sidebar -->
+        <img src="Dashboard Logo.png" alt="Victory Logo" style="margin-bottom: 100px">
+
+        <!-- Navigation buttons -->
+        <button class="nav-button" onclick="location.href='User Dashboard.html'">HOME</button>
+        <button class="nav-button" onclick="location.href='User Service.html'">SERVICES</button>
+        <button class="nav-button" onclick="location.href='User Give.html'">GIVE</button>
+        <button class="nav-button" onclick="location.href='about.html'" style="margin-bottom: 150px">ABOUT</button>
+
+        <!-- Logout button styled differently -->
+        <button class="logout-button" onclick="location.href='Sign_Up_Page.html'">LOG OUT</button>
+    </div>
+
+    <div class="main">
+        <!-- Header with slogan and user icon combined -->
+        <div class="header">
+            <div>
+                <h1 style="font-family: NATS; color: #0c3f70; margin-bottom: 5px">VICTORY MALOLOS</h1>
+                <p style="font-family: Mirza; margin-top: 0px; text-indent: 25px">Honor God. Make Disciples.</p>
+            </div>
+            <div class="user-info">
+                <img src="User.png" alt="User Icon">
+                <span style="font-family: Mirza">USER</span>
+            </div>
+        </div>
+
+        <div class="service-container">
+            <h2 style="margin-top: 5px; font-family: NATS">User Services</h2>
+            <div class="service-grid">
+                <button class="service-button">WORSHIP SERVICE</button>
+                <button class="service-button">BIBLE STUDY GROUP</button>
+                <button class="service-button">ENC STUDENTS</button>
+                <button class="service-button">VOLUNTEER ORIENTATION</button>
+                <button class="service-button">MARRIAGE PREP</button>
+                <button class="service-button">MARRIAGE COUNSELING</button>
+                <button class="service-button">DISCIPLESHIP CLASS</button>
+                <button class="service-button">DATETALK</button>
+                <button class="service-button">VICTORY WEEKEND</button>
+            </div>
+
+            <div class="pagination">
+                <button class="page-button">&laquo;</button>
+                <button class="page-button active">1</button>
+                <button class="page-button">2</button>
+                <button class="page-button">3</button>
+                <button class="page-button">4</button>
+                <button class="page-button">&raquo;</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

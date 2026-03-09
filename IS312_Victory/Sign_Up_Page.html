@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="view port" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="icon" type="image/png" href="Icon.png">
+
+    <style>
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #03223F;
+            color: #333;
+        }
+
+        /* Main container layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Left info card styling */
+        .info-card {
+            width: 45%;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* Logo image styling */
+        .info-card img {
+            width: 250px;     /* Adjust logo size */
+            height: auto;     /* Keep proportions */
+            display: block;
+            margin: 0 auto 20px auto; /* Center logo and add spacing below */
+        }
+
+        /* Mission text styling */
+        .mission-text h3 {
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+
+        .mission-text p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .learn-more {
+            text-decoration: none;
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        /* Right section styling */
+        .right {
+            width: 45%;
+            background: #03223F;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .right h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Input fields styling */
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Buttons styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #357ab8;
+        }
+
+        /* Social buttons */
+        .social {
+            background: #eee;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-card, .right {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="info-card">
+            <img src="Victory Logo - V Scpt.jpg" alt="Victory Logo">
+            <h2 style="font-family: Mirza; color: #0C3F70">LET'S GET STARTED!</h2>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <div class="mission-text">
+                <p> </p>
+                <h4 style="font-family: Mirza; colo: #000000">Victory Church Mission and Vision</h4>
+                <p></p>
+                <p style="font-family: Mirza; colo: #000000"> Victory Church's Mission and Vision are deeply rooted in the love of God and the great commission. The Church's Mission is to honor God and make disciples, with a focus EXPANSION and OUTREACH. </p>
+                <p>----------</p>
+                <p> </p>
+                <a href="###" class="learn-more">LEARN MORE!</a>
+            </div>
+        </div>
+
+        <div class="right">
+            <h2 style="color: #ffffff; text-align: left; margin-bottom: 5px">Create an Account</h2>
+            <p style="color: #ffffff; text-align: left; text-indent: 20px">already have an account <a href="Log_In_Page.html" class="click-here" style="color: #ffffff">click here!</a> </p>
+            <form method="POST" acction="/register">
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+
+                <button type="submit" style="margin-bottom: 10px">Create Account</button>
+                <p> </p>
+            </form>
+
+            <p style="text-align: center; color: #ffffff">------------- Or register with -------------</p>
+            <button class="social">Google</button> <button class="social">Facebook</button>
+        </div>
+
+    </div>
+</body>
+</html>

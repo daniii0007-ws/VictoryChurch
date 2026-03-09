@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victory Malolos - Give</title>
+
+    <style>
+        /* General page styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ced2dc;
+        }
+
+        /* Sidebar styling (same as dashboard) */
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar img {
+            display: block;
+            margin-top: 20px;
+            width: 180px;
+        }
+
+        /* Navigation buttons */
+        .nav-button, .logout-button {
+            color: #000000;
+            font-family: NATS;
+            background-color: #ffffff;
+            border: none;
+            padding: 12px;
+            margin: 5px 0;
+            cursor: pointer;
+            width: 80%;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #4a90e2;
+            color: #ffffff;
+            transform: scale(1.03);
+        }
+
+        .logout-button:hover {
+            background-color: #e74c3c;
+            color: #ffffff;
+            transform: scale(1.03);
+        }
+
+        /* Main content styling */
+        .main {
+            margin-left: 190px;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ecf0f1;
+            padding: 10px 20px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .header img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Donation container */
+        .donation-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        /* Donation buttons styled like service buttons */
+        .donation-button {
+            padding: 15px;
+            background: linear-gradient(90deg, #bacfdb, #9ab9cc);
+            border: none;
+            color: #000000;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .donation-buttons {
+            display: flex;          /* Arrange buttons in a row */
+            justify-content: flex-end; /* Align buttons to the right */
+            gap: 15px;              /* Space between buttons */
+        }
+        .donation-button:hover {
+            background: linear-gradient(135deg, #4a90e2, #357ab8);
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+        }
+
+        /* Section styling */
+        .section {
+            margin-top: 20px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img src="Dashboard Logo.png" alt="Victory Logo" style="margin-bottom: 100px">
+        <button class="nav-button" onclick="location.href='User Dashboard.html'">HOME</button>
+        <button class="nav-button" onclick="location.href='services.html'">SERVICES</button>
+        <button class="nav-button" onclick="location.href='give.html'">GIVE</button>
+        <button class="nav-button" onclick="location.href='about.html'" style="margin-bottom: 150px">ABOUT</button>
+        <button class="logout-button" onclick="location.href='Sign_Up_Page.html'">LOG OUT</button>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+        <div class="header">
+            <div>
+                <h1 style="font-family: NATS; color: #0c3f70; margin-bottom: 5px">VICTORY MALOLOS</h1>
+                <p style="font-family: Mirza; margin-top: 0px; text-indent: 25px">Honor God. Make Disciples.</p>
+            </div>
+            <div class="user-info">
+                <img src="User.png" alt="User Icon">
+                <span style="font-family: Mirza">USER</span>
+            </div>
+        </div>
+
+        <!-- Donation section -->
+        <div class="donation-container">
+            <h2 style="font-family: NATS">Give</h2>
+            <p style="font-family: Mirza">Choose your preferred donation method:</p>
+
+             <div class="donation-buttons">
+                <button class="donation-button">SCAN QR CODE</button>
+                <button class="donation-button">CREDIT OR DEBIT CARD</button>
+            </div>
+            <!-- Bible verse -->
+            <div class="section">
+                <h3>Bible Verse</h3>
+                <p>"For God loves a cheerful giver." - 2 Corinthians 9:7</p>
+            </div>
+
+            <!-- About donation -->
+            <div class="section">
+                <h3>About Donation</h3>
+                <p>Your generosity helps us continue our mission and outreach programs.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

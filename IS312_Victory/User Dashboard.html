@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victory Malolos Dashboard</title>
+
+    <style>
+        /* General page styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ced2dc;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            position: fixed; /* Sidebar stays fixed */
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar img {
+            display: block;
+            margin-top: 20px;
+            width: 180px;
+        }
+
+        /* Base button styling */
+        .nav-button, .logout-button {
+            color: #000000;
+            font-family: NATS;
+            background-color: #ffffff;
+            border: none;
+            padding: 12px;
+            margin: 5px 0;
+            cursor: pointer;
+            width: 80%;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #4a90e2;
+            color: #ffffff;
+            transform: scale(1.03);
+        }
+
+        .nav-button:active {
+            background-color: #357ab8;
+            transform: scale(0.98);
+        }
+
+        .logout-button:hover {
+            background-color: #e74c3c;
+            color: #ffffff;
+            transform: scale(1.03);
+        }
+
+        /* Main content styling */
+        .main {
+            margin-left: 190px; /* Matches sidebar width */
+            padding: 20px;
+        }
+
+        /* Header styling - combined divs */
+        .header {
+            display: flex;
+            justify-content: space-between; /* Logo left, user icon right */
+            align-items: center;
+            background-color: #ecf0f1;
+            padding: 10px 20px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .header img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center; /* Icon + text inline */
+        }
+
+        /* Events section styling - combined cards */
+        .events {
+            margin-top: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .event-list {
+            display: flex; /* Line up event cards */
+            gap: 20px;     /* Space between them */
+            flex-wrap: wrap; /* Wrap on smaller screens */
+        }
+
+        .event-card {
+            flex: 1;
+            min-width: 200px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="Dashboard Logo.png" alt="Victory Logo" style="margin-bottom: 100px">
+
+        <button class="nav-button" onclick="location.href='User Dashboard.html'">HOME</button>
+        <button class="nav-button" onclick="location.href='User Service.html'">SERVICES</button>
+        <button class="nav-button" onclick="location.href='User Give.html'">GIVE</button>
+        <button class="nav-button" onclick="location.href='about.html'" style="margin-bottom: 150px">ABOUT</button>
+        <button class="logout-button" onclick="location.href='Sign_Up_Page.html'">LOG OUT</button>
+    </div>
+
+    <div class="main">
+        <!-- Header with slogan and user icon combined -->
+        <div class="header">
+            <div>
+                <h1 style="font-family: NATS; color: #0c3f70; margin-bottom: 5px">VICTORY MALOLOS</h1>
+                <p style="font-family: Mirza; margin-top: 0px; text-indent: 25px">Honor God. Make Disciples.</p>
+            </div>
+            <div class="user-info">
+                <img src="User.png" alt="User Icon">
+                <span style="font-family: Mirza">USER</span>
+            </div>
+        </div>
+
+        <!-- Events section with combined cards -->
+        <div class="events" style="margin-top: 10px">
+            <h2 style="font-family: Mirza; font-size: 23px">Upcoming Events This Week</h2>
+            <div class="event-list">
+                <div class="event-card" style="font-family: NATS; ">No events scheduled yet.</div>
+                <!-- Future event cards can be added here -->
+                <!-- <div class="event-card">Sunday Service - 10 AM</div> -->
+                <!-- <div class="event-card">Youth Fellowship - Friday</div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

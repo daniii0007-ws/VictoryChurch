@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victory Login</title>
+
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #03223F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Login box styling */
+        .login-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Input fields */
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Login button */
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Links */
+        .links {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+        /* Styling for Remember Me checkbox */
+        .remember-me {
+            text-align: left;
+            font-size: 12px;
+            margin-left: 10px;      /* Indent by 10px */
+            margin-top: 8px;        /* Add spacing above */
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="Victory Logo - V Scpt.jpg" alt="Victory Logo" class="logo">
+
+        <h2 style="font-family: Mirza; font-size: 30px; color: #0c3f70; margin-top: 0px; margin-bottom: 0px">WELCOME!</h2>
+        <p style="font-family: Mirza; font-size: 13px">LOG IN TO YOUR ACCOUNT</p>
+        <form action="/login" method="POST"> <!-- Sends data to Python backend -->
+            <input type="email" name="email" placeholder="Email" required> <!-- Email input -->
+            <input type="password" name="password" placeholder="Enter Password" required> <!-- Password input -->
+            <div class="remember-me">
+                <input type="checkbox" name="remember"> Remember Me <!-- Checkbox -->
+            </div>
+            <button type="submit">Log In</button> <!-- Submit button -->
+        </form>
+        <div class="links">
+            <a href="###" style="font-style: italic; font-size: 12">Forgot Password?</a>
+        </div>
+    </div>
+
+</body>
+</html>
