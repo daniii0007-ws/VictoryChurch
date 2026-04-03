@@ -1,0 +1,392 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Victory Malolos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased h-screen flex overflow-hidden selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Desktop Sidebar -->
+    <aside class="hidden lg:flex flex-col w-auto h-screen bg-white border-r border-slate-200 shadow-sm z-20 shrink-0">
+        <!-- Logo -->
+        <div class="h-20 flex items-center justify-center border-b border-slate-100 flex-shrink-0">
+            <img src="../../LOGO1.png" alt="Logo" width="50" class="w-[50px] h-auto object-contain rounded-lg shadow-sm">
+        </div>
+        <!-- Navigation -->
+        <nav class="flex-1 flex flex-col gap-2 pt-6 px-3 overflow-y-auto" style="scrollbar-width: none;">
+            <!-- Active Dashboard -->
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-900 text-white shadow-sm">
+                <iconify-icon icon="solar:home-2-linear" class="text-xl"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">Dashboard</span>
+            </a>
+
+            <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200">
+                <iconify-icon icon="solar:play-stream-linear" class="text-xl group-hover:scale-110 transition-transform"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">Services</span>
+            </a>
+
+            <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200">
+                <iconify-icon icon="solar:document-linear" class="text-xl group-hover:scale-110 transition-transform"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">Request</span>
+            </a>
+
+            <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200">
+                <iconify-icon icon="solar:chart-square-linear" class="text-xl group-hover:scale-110 transition-transform"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">Report</span>
+            </a>
+
+            <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200">
+                <iconify-icon icon="solar:user-linear" class="text-xl group-hover:scale-110 transition-transform"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">User</span>
+            </a>
+        </nav>
+
+        <!-- Bottom Controls -->
+        <div class="p-4 border-t border-slate-100 bg-slate-50 flex flex-col items-center gap-4">
+            <button class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-900 to-blue-600 border-2 border-white shadow-sm flex items-center justify-center text-white text-xs font-medium tracking-tight hover:ring-2 hover:ring-blue-900/20 transition-all">
+                AD
+            </button>
+            <button class="text-slate-400 hover:text-red-500 transition-colors flex items-center gap-2" title="Logout">
+                <iconify-icon icon="solar:logout-2-linear" class="text-xl"></iconify-icon>
+                <span class="text-xs uppercase tracking-wider font-medium">Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile Navigation -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 flex justify-around p-3 pb-safe z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+        <a href="#" class="text-blue-900 flex flex-col items-center p-2">
+            <iconify-icon icon="solar:home-2-linear" class="text-2xl"></iconify-icon>
+        </a>
+        <a href="#" class="text-slate-400 flex flex-col items-center hover:text-blue-900 transition-colors p-2">
+            <iconify-icon icon="solar:document-linear" class="text-2xl"></iconify-icon>
+        </a>
+        <a href="#" class="text-slate-400 flex flex-col items-center hover:text-blue-900 transition-colors p-2">
+            <iconify-icon icon="solar:user-linear" class="text-2xl"></iconify-icon>
+        </a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col min-w-0 overflow-hidden relative">
+
+        <!-- Top Bar -->
+        <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6 lg:px-10 z-20 shrink-0">
+            <!-- Search -->
+            <div class="flex-1 max-w-md hidden sm:block">
+                <div class="relative group">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <iconify-icon icon="solar:magnifer-linear" class="text-base text-slate-400 group-focus-within:text-blue-500 transition-colors"></iconify-icon>
+                    </div>
+                    <input type="text" placeholder="Search" class="block w-full pl-10 pr-4 py-2 bg-slate-100 border-transparent rounded-full text-sm placeholder-slate-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10 transition-all outline-none shadow-sm font-normal">
+                </div>
+            </div>
+
+            <div class="flex-1 sm:hidden text-lg tracking-tight font-medium text-slate-800">
+                Dashboard
+            </div>
+
+            <!-- Topbar Settings -->
+            <div class="flex items-center gap-4 ml-4">
+                <button class="relative p-2 text-slate-400 hover:text-slate-700 bg-slate-50 rounded-full hover:bg-slate-100 transition-colors">
+                    <iconify-icon icon="solar:bell-linear" class="text-xl"></iconify-icon>
+                    <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-red-500 border border-white"></span>
+                </button>
+                <button class="p-2 text-slate-400 hover:text-slate-700 bg-slate-50 rounded-full hover:bg-slate-100 transition-colors hidden sm:block">
+                    <iconify-icon icon="solar:settings-linear" class="text-xl"></iconify-icon>
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Dashboard Content -->
+        <main class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 pb-24 lg:pb-10">
+            <div class="max-w-[1400px] mx-auto space-y-6">
+
+                <!-- Page Header -->
+                <div class="hidden sm:block mb-2">
+                    <h1 class="text-xl font-medium text-slate-800 tracking-tight">Overview</h1>
+                    <p class="text-sm font-normal text-slate-500 mt-1">Monitor your service requests and overall performance.</p>
+                </div>
+
+                <!-- Summary Cards Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4">
+
+                    <!-- Card: Total Requests -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                                <iconify-icon icon="solar:documents-linear" class="text-xl"></iconify-icon>
+                            </div>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Total</span>
+                        </div>
+                        <div class="text-3xl font-medium tracking-tight text-slate-800 mb-1">1,248</div>
+                        <div class="flex items-center gap-1.5 text-xs font-normal text-slate-500">
+                            <span class="text-green-500 flex items-center"><iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon> +12%</span>
+                            from last month
+                        </div>
+                    </div>
+
+                    <!-- Card: Pending -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-500">
+                                <iconify-icon icon="solar:clock-circle-linear" class="text-xl"></iconify-icon>
+                            </div>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Pending</span>
+                        </div>
+                        <div class="text-3xl font-medium tracking-tight text-slate-800 mb-1">156</div>
+                        <div class="flex items-center gap-1.5 text-xs font-normal text-slate-500">
+                            <span class="text-red-400 flex items-center"><iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon> +4%</span>
+                            needs attention
+                        </div>
+                    </div>
+
+                    <!-- Card: Approved -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
+                                <iconify-icon icon="solar:check-read-linear" class="text-xl"></iconify-icon>
+                            </div>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Approved</span>
+                        </div>
+                        <div class="text-3xl font-medium tracking-tight text-slate-800 mb-1">482</div>
+                        <div class="flex items-center gap-1.5 text-xs font-normal text-slate-500">
+                            <span class="text-slate-400">Steady volume</span>
+                        </div>
+                    </div>
+
+                    <!-- Card: Completed -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-xl"></iconify-icon>
+                            </div>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Completed</span>
+                        </div>
+                        <div class="text-3xl font-medium tracking-tight text-slate-800 mb-1">610</div>
+                        <div class="flex items-center gap-1.5 text-xs font-normal text-slate-500">
+                            <span class="text-green-500 flex items-center"><iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon> +18%</span>
+                            from last month
+                        </div>
+                    </div>
+
+                    <!-- Card: Upcoming Events -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow col-span-2 md:col-span-1 xl:col-span-1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-500">
+                                <iconify-icon icon="solar:calendar-linear" class="text-xl"></iconify-icon>
+                            </div>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Events</span>
+                        </div>
+                        <div class="text-3xl font-medium tracking-tight text-slate-800 mb-1">12</div>
+                        <div class="flex items-center gap-1.5 text-xs font-normal text-slate-500">
+                            <span>Scheduled this week</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Main Chart Area -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
+                    <div class="flex justify-between items-start mb-8">
+                        <div>
+                            <h2 class="text-xl font-medium text-slate-800 tracking-tight">Service Request Status</h2>
+                            <p class="text-sm font-normal text-slate-500 mt-1">Monthly breakdown of request lifecycle</p>
+                        </div>
+                        <div class="flex items-center gap-4 hidden sm:flex">
+                            <div class="flex items-center gap-2 text-xs font-normal text-slate-500">
+                                <div class="w-3 h-3 rounded-full bg-amber-400"></div> Pending
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-normal text-slate-500">
+                                <div class="w-3 h-3 rounded-full bg-slate-300"></div> Approved
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-normal text-slate-500">
+                                <div class="w-3 h-3 rounded-full bg-green-400"></div> Completed
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grouped Bar Chart Implementation -->
+                    <div class="h-64 relative w-full flex items-end">
+                        <!-- Y-axis -->
+                        <div class="absolute left-0 top-0 bottom-8 flex flex-col justify-between text-xs font-normal text-slate-400 pr-4 w-10 text-right">
+                            <span>300</span>
+                            <span>200</span>
+                            <span>100</span>
+                            <span>0</span>
+                        </div>
+
+                        <!-- Horizontal Grid Lines -->
+                        <div class="absolute left-10 right-0 top-0 bottom-8 flex flex-col justify-between pointer-events-none">
+                            <div class="w-full border-t border-slate-100"></div>
+                            <div class="w-full border-t border-slate-100"></div>
+                            <div class="w-full border-t border-slate-100"></div>
+                            <div class="w-full border-t border-slate-100"></div>
+                        </div>
+
+                        <!-- Chart Container -->
+                        <div class="flex-1 flex justify-around items-end h-[calc(100%-2rem)] pl-10 relative z-10">
+
+                            <!-- Month Group: Jan -->
+                            <div class="flex items-end gap-1 w-full max-w-[80px] h-full justify-center group relative pb-2">
+                                <div class="w-1/3 bg-amber-400 rounded-t-sm transition-all hover:opacity-80" style="height: 30%;"></div>
+                                <div class="w-1/3 bg-slate-300 rounded-t-sm transition-all hover:opacity-80" style="height: 45%;"></div>
+                                <div class="w-1/3 bg-green-400 rounded-t-sm transition-all hover:opacity-80" style="height: 25%;"></div>
+                                <span class="absolute -bottom-6 text-xs font-normal text-slate-500">Jan</span>
+                            </div>
+
+                            <!-- Month Group: Feb -->
+                            <div class="flex items-end gap-1 w-full max-w-[80px] h-full justify-center group relative pb-2">
+                                <div class="w-1/3 bg-amber-400 rounded-t-sm transition-all hover:opacity-80" style="height: 20%;"></div>
+                                <div class="w-1/3 bg-slate-300 rounded-t-sm transition-all hover:opacity-80" style="height: 60%;"></div>
+                                <div class="w-1/3 bg-green-400 rounded-t-sm transition-all hover:opacity-80" style="height: 40%;"></div>
+                                <span class="absolute -bottom-6 text-xs font-normal text-slate-500">Feb</span>
+                            </div>
+
+                            <!-- Month Group: Mar -->
+                            <div class="flex items-end gap-1 w-full max-w-[80px] h-full justify-center group relative pb-2">
+                                <div class="w-1/3 bg-amber-400 rounded-t-sm transition-all hover:opacity-80" style="height: 35%;"></div>
+                                <div class="w-1/3 bg-slate-300 rounded-t-sm transition-all hover:opacity-80" style="height: 50%;"></div>
+                                <div class="w-1/3 bg-green-400 rounded-t-sm transition-all hover:opacity-80" style="height: 65%;"></div>
+                                <span class="absolute -bottom-6 text-xs font-normal text-slate-500">Mar</span>
+                            </div>
+
+                            <!-- Month Group: Apr -->
+                            <div class="flex items-end gap-1 w-full max-w-[80px] h-full justify-center group relative pb-2">
+                                <div class="w-1/3 bg-amber-400 rounded-t-sm transition-all hover:opacity-80" style="height: 25%;"></div>
+                                <div class="w-1/3 bg-slate-300 rounded-t-sm transition-all hover:opacity-80" style="height: 40%;"></div>
+                                <div class="w-1/3 bg-green-400 rounded-t-sm transition-all hover:opacity-80" style="height: 85%;"></div>
+                                <span class="absolute -bottom-6 text-xs font-normal text-slate-500">Apr</span>
+                            </div>
+
+                            <!-- Month Group: May -->
+                            <div class="flex items-end gap-1 w-full max-w-[80px] h-full justify-center group relative pb-2">
+                                <div class="w-1/3 bg-amber-400 rounded-t-sm transition-all hover:opacity-80" style="height: 45%;"></div>
+                                <div class="w-1/3 bg-slate-300 rounded-t-sm transition-all hover:opacity-80" style="height: 30%;"></div>
+                                <div class="w-1/3 bg-green-400 rounded-t-sm transition-all hover:opacity-80" style="height: 50%;"></div>
+                                <span class="absolute -bottom-6 text-xs font-normal text-slate-500">May</span>
+                            </div>
+
+                            <!-- Month Group: Jun -->
+                            <div class="flex items-end gap-1 w-full max-w-[80px] h-full justify-center group relative pb-2 hidden sm:flex">
+                                <div class="w-1/3 bg-amber-400 rounded-t-sm transition-all hover:opacity-80" style="height: 15%;"></div>
+                                <div class="w-1/3 bg-slate-300 rounded-t-sm transition-all hover:opacity-80" style="height: 70%;"></div>
+                                <div class="w-1/3 bg-green-400 rounded-t-sm transition-all hover:opacity-80" style="height: 90%;"></div>
+                                <span class="absolute -bottom-6 text-xs font-normal text-slate-500">Jun</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest Requests Table Section -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+                    <div class="p-6 border-b border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <h2 class="text-xl font-medium text-slate-800 tracking-tight">Latest Service Requests</h2>
+
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-5 rounded-xl text-sm font-normal shadow-sm shadow-blue-200 flex items-center gap-2 transition-colors whitespace-nowrap">
+                            <iconify-icon icon="solar:add-circle-linear" class="text-lg"></iconify-icon>
+                            Add Request
+                        </button>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left whitespace-nowrap">
+                            <thead class="bg-slate-50/50">
+                                <tr>
+                                    <th class="py-3 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider border-b border-slate-100">Request ID</th>
+                                    <th class="py-3 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider border-b border-slate-100">Requested By</th>
+                                    <th class="py-3 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider border-b border-slate-100">Service Type</th>
+                                    <th class="py-3 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider border-b border-slate-100">Date</th>
+                                    <th class="py-3 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider border-b border-slate-100">Status</th>
+                                    <th class="py-3 px-6 text-xs font-medium text-slate-500 uppercase tracking-wider border-b border-slate-100 text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr class="hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 text-sm font-medium text-slate-800">REQ-8021</td>
+                                    <td class="py-4 px-6">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-medium">JD</div>
+                                            <span class="text-sm font-normal text-slate-700">John Dela Cruz</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-sm font-normal text-slate-600">Worship Service Audio</td>
+                                    <td class="py-4 px-6 text-sm font-normal text-slate-500">Oct 24, 2024</td>
+                                    <td class="py-4 px-6">
+                                        <span class="inline-flex items-center gap-1.5 bg-amber-50 text-amber-600 font-medium text-xs px-2.5 py-1 rounded-md border border-amber-100">
+                                            <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div> Pending
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-6 text-right text-slate-400">
+                                        <button class="p-1 hover:text-blue-600 transition-colors"><iconify-icon icon="solar:menu-dots-bold" class="text-lg"></iconify-icon></button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 text-sm font-medium text-slate-800">REQ-8020</td>
+                                    <td class="py-4 px-6">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-xs font-medium">MS</div>
+                                            <span class="text-sm font-normal text-slate-700">Maria Santos</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-sm font-normal text-slate-600">Youth Fellowship Setup</td>
+                                    <td class="py-4 px-6 text-sm font-normal text-slate-500">Oct 23, 2024</td>
+                                    <td class="py-4 px-6">
+                                        <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-600 font-medium text-xs px-2.5 py-1 rounded-md border border-slate-200">
+                                            <div class="w-1.5 h-1.5 rounded-full bg-slate-400"></div> Approved
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-6 text-right text-slate-400">
+                                        <button class="p-1 hover:text-blue-600 transition-colors"><iconify-icon icon="solar:menu-dots-bold" class="text-lg"></iconify-icon></button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 text-sm font-medium text-slate-800">REQ-8019</td>
+                                    <td class="py-4 px-6">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-medium">MT</div>
+                                            <span class="text-sm font-normal text-slate-700">Mark Tolentino</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-sm font-normal text-slate-600">Bible Study Materials</td>
+                                    <td class="py-4 px-6 text-sm font-normal text-slate-500">Oct 21, 2024</td>
+                                    <td class="py-4 px-6">
+                                        <span class="inline-flex items-center gap-1.5 bg-green-50 text-green-600 font-medium text-xs px-2.5 py-1 rounded-md border border-green-100">
+                                            <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> Completed
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-6 text-right text-slate-400">
+                                        <button class="p-1 hover:text-blue-600 transition-colors"><iconify-icon icon="solar:menu-dots-bold" class="text-lg"></iconify-icon></button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 text-sm font-medium text-slate-800">REQ-8018</td>
+                                    <td class="py-4 px-6">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center text-xs font-medium">AS</div>
+                                            <span class="text-sm font-normal text-slate-700">Ana Sanchez</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-sm font-normal text-slate-600">Leadership Training Room</td>
+                                    <td class="py-4 px-6 text-sm font-normal text-slate-500">Oct 20, 2024</td>
+                                    <td class="py-4 px-6">
+                                        <span class="inline-flex items-center gap-1.5 bg-green-50 text-green-600 font-medium text-xs px-2.5 py-1 rounded-md border border-green-100">
+                                            <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> Completed
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-6 text-right text-slate-400">
+                                        <button class="p-1 hover:text-blue-600 transition-colors"><iconify-icon icon="solar:menu-dots-bold" class="text-lg"></iconify-icon></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+</body></html>
