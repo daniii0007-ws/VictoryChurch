@@ -1,10 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Victory Malolos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased h-screen flex overflow-hidden selection:bg-blue-100 selection:text-blue-900">
 
-</body>
-</html>
+    <!-- Desktop Sidebar -->
+    <aside class="hidden lg:flex flex-col w-auto h-screen bg-white border-r border-slate-200 shadow-sm z-20 shrink-0">
+        <!-- Logo -->
+        <div class="h-20 flex items-center justify-center border-b border-slate-100 flex-shrink-0">
+            <img src="../../LOGO1.png" alt="Logo" width="50" class="w-[50px] h-auto object-contain rounded-lg shadow-sm">
+        </div>
+        <!-- Navigation -->
+        <nav class="flex-1 flex flex-col gap-2 pt-6 px-3 overflow-y-auto" style="scrollbar-width: none;">
+
+            <a href="AdminHome.html" class="group flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200">
+                <iconify-icon icon="solar:home-2-linear" class="text-xl"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">Home</span>
+            </a>
+
+            <a href="AdminServices.html" class="group flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200">
+                <iconify-icon icon="solar:play-stream-linear" class="text-xl group-hover:scale-110 transition-transform"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">Services</span>
+            </a>
+
+
+            <a href="AdminRequest.html" class="group flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200">
+                <iconify-icon icon="solar:document-linear" class="text-xl group-hover:scale-110 transition-transform"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">Request</span>
+            </a>
+
+            <a href="AdminReport.html" class="group flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200">
+                <iconify-icon icon="solar:chart-square-linear" class="text-xl group-hover:scale-110 transition-transform"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">Report</span>
+            </a>
+
+            <!-- Active User -->
+            <a href="AdminUser.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-900 text-white shadow-sm">
+                <iconify-icon icon="solar:user-linear" class="text-xl group-hover:scale-110 transition-transform"></iconify-icon>
+                <span class="text-xs font-medium uppercase tracking-wider">User</span>
+            </a>
+        </nav>
+
+        <!-- Bottom Controls -->
+        <div class="p-4 border-t border-slate-100 bg-slate-50 flex flex-col items-center gap-4">
+            <button class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-900 to-blue-600 border-2 border-white shadow-sm flex items-center justify-center text-white text-xs font-medium tracking-tight hover:ring-2 hover:ring-blue-900/20 transition-all">
+                AD
+            </button>
+            <button class="text-slate-400 hover:text-red-500 transition-colors flex items-center gap-2" title="Logout">
+                <iconify-icon icon="solar:logout-2-linear" class="text-xl"></iconify-icon>
+                <span class="text-xs uppercase tracking-wider font-medium">Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile Navigation -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 flex justify-around p-3 pb-safe z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+        <a href="#" class="text-blue-900 flex flex-col items-center p-2">
+            <iconify-icon icon="solar:home-2-linear" class="text-2xl"></iconify-icon>
+        </a>
+        <a href="#" class="text-slate-400 flex flex-col items-center hover:text-blue-900 transition-colors p-2">
+            <iconify-icon icon="solar:document-linear" class="text-2xl"></iconify-icon>
+        </a>
+        <a href="#" class="text-slate-400 flex flex-col items-center hover:text-blue-900 transition-colors p-2">
+            <iconify-icon icon="solar:user-linear" class="text-2xl"></iconify-icon>
+        </a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col min-w-0 overflow-hidden relative">
+
+        <!-- Top Bar -->
+        <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6 lg:px-10 z-20 shrink-0">
+
+        </header>
+
+        <!-- Scrollable Dashboard Content -->
+        <main class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 pb-24 lg:pb-10">
+
+        </main>
+    </div>
+
+</body></html>
